@@ -1,0 +1,93 @@
+/* This is a mess
+Do i intend to fix it?
+fuck no */
+
+body {
+  font-size: 16px;
+  background-color: black;
+  background-image: url('firee.gif');
+  color: white;
+  display: flex; 
+  cursor: crosshair;
+  user-select: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover{
+  font-size: 30px;
+  font-style: italic;
+  color: pink;
+}
+
+a img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  filter: blur(6px);
+}
+
+h1 {
+  font-style: italic;
+  font-size: 48px;
+  text-align: center;
+}
+
+nav {
+  background-color: gray;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+nav:hover {
+  color: blue;
+}
+
+span {
+  display: block; /* Change to block-level element */
+  position: absolute; /* Position element */
+  right: 0; /* Align to the right end */
+  padding-right: 10px;
+}
+
+article {
+  text-align: center;
+  margin: auto;
+}
+
+footer {
+  background-color: #000000;
+  color: white;
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: small;
+  font-weight: 100;
+  position: absolute; /* Update the position */
+  bottom: 0; /* Set the footer to stick to the bottom */
+  left: 0;
+  right: 0;
+}
+
+#hesleep {
+  position: absolute;
+  z-index: 2;
+  transition: opacity 0.5s;
+}
+
+#hesleep:hover {
+  opacity: 0;
+}
+
+#nosleep {
+  position: absolute;
+  z-index: 1; /* Update the z-index */
+  transition: opacity 0.5s;
+}
+
+#nosleep:hover {
+  opacity: 1;
+}
