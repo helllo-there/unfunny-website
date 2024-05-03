@@ -17,6 +17,10 @@ a {
   text-decoration: none;
 }
 
+abbr {
+  text-decoration: none;
+}
+
 a:hover{
   font-size: 30px;
   font-style: italic;
