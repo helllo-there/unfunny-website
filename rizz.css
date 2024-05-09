@@ -4,12 +4,13 @@ fuck no */
 
 body {
   font-size: 16px;
-  background-color: black;
-  background-image: url('firee.gif');
+  background-image: url('images/firee.gif');
+  background-size:cover;
   color: white;
-  display: flex; 
   cursor: crosshair;
   user-select: none;
+  background-position: center-bottom;
+  background-attachment: fixed;
 }
 
 a {
@@ -17,12 +18,7 @@ a {
   text-decoration: none;
 }
 
-abbr {
-  text-decoration: none;
-}
-
 a:hover{
-  font-size: 30px;
   font-style: italic;
   color: pink;
 }
@@ -49,11 +45,8 @@ nav:hover {
   color: blue;
 }
 
-span {
-  display: block; /* Change to block-level element */
-  position: absolute; /* Position element */
-  right: 0; /* Align to the right end */
-  padding-right: 10px;
+abbr {
+  text-decoration: none;
 }
 
 article {
@@ -62,9 +55,10 @@ article {
 }
 
 footer {
-  background-color: #000000;
+  /*background-color: #000000;*/
   color: white;
   display: block;
+  background-color: black;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
@@ -80,6 +74,7 @@ footer {
   position: absolute;
   z-index: 2;
   transition: opacity 0.5s;
+  padding-top:20px;
 }
 
 #hesleep:hover {
@@ -90,8 +85,20 @@ footer {
   position: absolute;
   z-index: 1; /* Update the z-index */
   transition: opacity 0.5s;
+  padding-top:20px;
 }
 
 #nosleep:hover {
   opacity: 1;
 }
+
+#flash-image, #not-important{
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
