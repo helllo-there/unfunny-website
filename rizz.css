@@ -4,13 +4,64 @@ fuck no */
 
 body {
   font-size: 16px;
-  background-image: url('images/firee.gif');
   background-size:cover;
   color: white;
   cursor: crosshair;
   user-select: none;
   background-position: center-bottom;
   background-attachment: fixed;
+}
+
+h1,
+nav,
+article,
+footer {
+  z-index: 2;
+}
+
+#background {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, 
+    #7474E0 0%, #7474E0 25%, 
+    #4F4F99 25%, #4F4F99 50%, 
+    #262669 50%, #262669 75%, 
+    #1b1b66 75%, #1b1b66 100%);
+  background-size: 300% 300%; /* Increase background size for the animation */
+  animation: waveAnimation 20s infinite alternate ease-in-out; /* Infinite alternate ease-in-out animation for smooth effect */
+}
+
+@keyframes waveAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.bubble {
+  position: absolute;
+  background-color: green;
+  border-radius: 50%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cursor-glow {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1; /* ensure higher z-index than bubbles */
+  width: 0;
+  height: 0;
+  box-shadow: 0 0 30px 20px rgba(255, 105, 180, 0.7), /* pink glow */
+              0 0 60px 40px rgba(255, 105, 180, 0.5),
+              0 0 90px 60px rgba(255, 105, 180, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
 }
 
 a {
@@ -21,10 +72,6 @@ a {
 a:hover{
   font-style: italic;
   color: pink;
-}
-
-abbr {
-  text-decoration: none;
 }
 
 a img {
